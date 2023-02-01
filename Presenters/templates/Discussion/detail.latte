@@ -1,0 +1,24 @@
+{block content}
+	
+<table border="1" >
+	<tr>
+		<th>Přezdívka</th>
+    <td>{$discussionItem['prezdivka']}</td>
+  </tr>
+  <tr>
+		<th>Email</th>
+    <td>{$discussionItem['email']}</td>
+  </tr>
+  <tr>
+		<th>Příspěvek</th>
+    <td>{$discussionItem['data']}</td>
+  </tr>
+</table>
+
+{* odkazujeme na defaultni akci v discussionu, klikaci slovo je seznam *}
+<a n:href="Discussion:">seznam</a>
+{/block}
+
+{block title}
+{$title}
+{/block}

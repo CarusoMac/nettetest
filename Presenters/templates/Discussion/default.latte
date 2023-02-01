@@ -1,21 +1,34 @@
 {block content}
-	
+	{* pro include v sablone include content *}
 <table border="1" n:if="$discussionItems">
+
+{* n:if pokud je splnena podminka bude se renderovat *}
+{* discussionItems je definovano v  presenteru*}
 	<tr>
 		<th>Přezdívka</th>
 		<th>Email</th>
 		<th>Příspěvek</th>
-    <th></th>
+    	<th></th>
 	</tr>
 	<tr n:foreach="$discussionItems as $item">
 		<td>{$item['prezdivka']}</td>
 		<td>{$item['email']}</td>
-		<td>{$item['data']}</td>    
+		<td>{$item['data']}</td>
+		<td>
+			<a n:href="Discussion:detail $item['id']">detail</a>
+			<a n:href="Discussion:addPositive $item['id']">Líbí se mi:{$item['pozitivni']}</a>
+			<a n:href="Discussion:addNegative $item['id']">Neíbí se mi:{$item['negativni']}</a>
+		</td>    
 	</tr>
 </table>
+
+
+{control discussionForm}
 
 {/block}
 
 {block title}
+{* z render default v presenteru this->template->title *}
 {$title}
-{/block}
+{* ukonceni block contentu *}
+{/block} 
