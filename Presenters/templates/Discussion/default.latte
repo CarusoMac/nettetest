@@ -1,0 +1,21 @@
+{block content}
+	
+<table border="1" n:if="$discussionItems">
+	<tr>
+		<th>Přezdívka</th>
+		<th>Email</th>
+		<th>Příspěvek</th>
+    <th></th>
+	</tr>
+	<tr n:foreach="$discussionItems as $item">
+		<td>{$item['prezdivka']}</td>
+		<td>{$item['email']}</td>
+		<td>{$item['data']}</td>    
+	</tr>
+</table>
+
+{/block}
+
+{block title}
+{$title}
+{/block}

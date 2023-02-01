@@ -7,6 +7,7 @@ use \Nette\Application\UI\Presenter;
 use App\Model\DiscussionManager;
 use \Nette\Application\UI\Form;
 
+// discusion presenter je folder z template
 class DiscussionPresenter extends \Nette\Application\UI\Presenter
 {
   /**
