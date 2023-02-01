@@ -19,4 +19,10 @@ class DiscussionPresenter extends \Nette\Application\UI\Presenter
     $this->discussionManager = $discussionManager;
     parent::__construct();
   }
+
+  public function renderDefault()
+  {
+    $this->template->discussionItems = $this->discussionManager->getDisscussionItems();
+    $this->template->title = 'Seznam příspěvků';
+  }
 }
